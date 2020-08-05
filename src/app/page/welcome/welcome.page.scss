@@ -1,0 +1,65 @@
+ion-slides{
+    height: 90% !important;
+
+}
+
+.slider {
+    height: 90% !important;
+    img {
+      
+      width: 203.5px;
+      height: 229.9px;
+      width: 100%;
+    }
+    .title {
+      text-align: left;
+      margin-left: 20px;
+      margin-top: 53px;
+      font-size: 15pt;
+      font-weight: 500;
+    }
+    .details {
+      margin: auto;
+      margin-top: 16px;
+      margin-left: 20px;
+      margin-right: 41px;
+      text-align: left;
+      width: 90%;
+      font-size: 10pt;
+      font-weight: normal;
+      text-align: left;
+      color: #818181;
+    }
+    .swiper-pagination-bullet-active {
+      background: color(red, blue);
+    }
+    button.swiper-pagination-bullet {
+      width: 13px;
+      height: 3px;
+      object-fit: contain;
+      border-radius: 40px;
+      background-color: color(red, blue);
+    }
+    .swiper-pagination-bullets {
+      margin: 30px 0px;
+    }
+    .swiper-slide {
+      @media only screen and (max-width: 360px) {
+        height: 80% !important;
+      }
+      //  height: 80% !important;
+    }
+  }
+
+  .actions {
+    text-align: center;
+    display: block;
+    // height: fill-availab/le;
+    .slider-controls {
+      padding-bottom: 20px;
+      button {
+        width: 150.5px;
+        margin-right: 11px;
+      }
+    }
+  }

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="white">
+    <button   class="header-btn">
+      next
+    </button>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content  padding class="ion-padding">
+  <form >
+
+    <div class="texts">
+      <ion-item no-lines no-padding>
+        <ion-textarea  rows="2" class="title" placeholder="Title"></ion-textarea>
+      </ion-item>
+      <ion-item no-lines no-padding>
+        <ion-textarea  rows="3" placeholder="Post">
+
+        </ion-textarea>
+      </ion-item>
+
+    </div>
+  </form>
+  <div class="media">
+    <div class="note">Add Photo/Video</div>
+    <div class="selected-media">
+      <div class="action"   >
+        <ion-icon name="play" class="icon"></ion-icon>
+        Play Selected Video
+      </div>
+
+      <div class="action image" >
+        <!-- <img [src]="image" [imageViewer]="image" class="icon"> -->
+      </div>
+    </div>
+
+    <div  class="action">
+      <ion-icon class="icon" name="add"></ion-icon>
+      Take Photo
+    </div>
+    <div class="action">
+      <ion-icon class="icon" name="add"></ion-icon>
+      Choose Image
+    </div>
+    <div  tappable class="action">
+      <ion-icon class="icon" name="add"></ion-icon>
+      Choose Video
+    </div>
+  </div>
+
+</ion-content>

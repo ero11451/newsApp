@@ -1,0 +1,86 @@
+<ion-header class="ion-no-border" >
+
+  <ion-toolbar  color="success">
+    <ion-item color="success" class="search-bar" lines ='none'>
+      <ion-avatar (click)="openAccountOptions()" tappable item-left class="avatar">
+        <!-- <img src="{{user?.imageUrl || 'assets/imgs/avatar.png'}}"> -->
+      </ion-avatar>
+      <span tappable (click)="goToSearch()">
+        <ion-searchbar class="searc" mode="wp" placeholder="Search 'Latest News'"></ion-searchbar>
+      </span>
+    </ion-item>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content #content>
+  <ion-refresher  (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="Pull to refresh"></ion-refresher-content>
+  </ion-refresher>
+
+  <div class="categories">
+    <div class="categorySlider">
+      <div class="category-box">
+        <div (click)="openCategoryDetails(category.id,category.title)" tappable *ngFor="let category of categories"
+          class="category">
+          <div class="image">
+            <img [src]="category.image" alt="">
+          </div>
+          <div class="title" text-capitalize>
+            {{category.title}}
+          </div>
+        </div>
+        <div (click)="openCategoryDetails('ireport','iReport')" tappable class="category">
+          <div class="image">
+            <img src="assets/imgs/categories/ireport.svg" alt="">
+          </div>
+          <div class="title">
+            iReport
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div *ngIf="adSlides && adSlides.length" class="ads">
+    <div class="title">Sponsored Ads</div>
+    <ion-slides #adSlider  >
+      <ion-slide tappable *ngFor="let slide of adSlides" (click)="openPost(slide.link)">
+        <ion-card  >
+          <img [src]="slide.imageUrl" alt="sponsored ad">
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>  -->
+  <div class="posts">
+    
+    <ion-card  *ngFor="let post of posts" >
+      <ion-card-content no-margin>
+        <ion-item  lines='none' class="ion-no-padding">
+         <div>
+           <p class="title">{{post.title}} </p>
+          <span class="excerpt">{{post.discription}}</span>        
+         </div>
+
+          <ion-thumbnail slot="end">
+            <img src="{{post.image}}" >
+          </ion-thumbnail>
+          </ion-item>
+          <div class="footer">
+            <img src="{{post.image}}" alt="tsltv logo">
+            <span>TslNigeria Tv News</span>
+            <div class="bullet"></div>
+            <span>{{post.modified}}</span> 
+          </div>
+
+      </ion-card-content>
+
+    </ion-card>
+  </div> 
+
+   <!-- <ion-infinite-scroll  (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>  -->
+
+</ion-content>
+

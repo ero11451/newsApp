@@ -1,0 +1,48 @@
+
+
+<ion-content>
+<ion-slides pager="true"
+#slider
+pager
+ >
+  <ion-slide>
+    <div class="slider">
+        <img src="../../../assets/images/welcome.jpg">
+      
+        <h4 class="title">welcome</h4>
+        <p class="details">
+          Lorem ipsum dolor sit amet consectetur adipisi
+          cing elit. Odit expedita voluptate magnam omnis
+              </p>  
+    </div>
+  </ion-slide>
+  <ion-slide>
+    <div class="slider">
+      <img src="assets/images/slider1.jpg">
+    
+      <h4 class="title">welcome</h4>
+      <p class="details">
+        Lorem ipsum dolor sit amet consectetur adipisi
+        cing elit. Odit expedita voluptate magnam omnis
+            </p>  
+  </div>
+  </ion-slide>
+  <ion-slide>
+    <div class="slider">
+      <img src="assets/images/slider.jpg">
+    
+      <h4 class="title">welcome</h4>
+      <p class="details">
+        Lorem ipsum dolor sit amet consectetur adipisi
+        cing elit. Odit expedita voluptate magnam omnis
+            </p>  
+  </div>
+  </ion-slide>
+</ion-slides>
+  
+    <ion-item lines="none">
+      <ion-button slot="start" (click)="slider.slidePrev()"   outline text-capitalize>Previous</ion-button>
+      <ion-button slot="end" (click)="slider.isEnd() ? goToAuth() : slider.slideNext()"  text-capitalize>Skip</ion-button>
+    </ion-item>
+
+</ion-content>
