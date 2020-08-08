@@ -1,3 +1,4 @@
+import { HttpClientModule } from "@angular/common/http";
 import { GooglePlus } from '@ionic-native/google-plus/ngx';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,6 +20,7 @@ import { IonicStorageModule } from '@ionic/storage';
     BrowserModule,
     IonicModule.forRoot(), 
     AppRoutingModule,
+    HttpClientModule,
     IonicStorageModule.forRoot()],
   providers: [
     StatusBar,

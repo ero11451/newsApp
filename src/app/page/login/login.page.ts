@@ -32,7 +32,7 @@ loginWithGoogle(){
       this.storage.set('user', user);
       this.ion.ionModal(HomePage, user + 'this as ');
     })
-   .catch(err => this.ion.ionToast('error in your request', 2000 , 'danger'));
+   .catch(err => this.ion.ionToast(err, 2000 , 'danger'));
  }
 
 }
