@@ -1,7 +1,7 @@
 
-<ion-header>
-  <ion-toolbar>
-    <ion-title> Live Streaming</ion-title>
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-no-border">
+    <ion-title color="success"> Live Streaming</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,19 +12,23 @@
   <!-- <div class="loading" >
     <ion-spinner color="primary"></ion-spinner>
   </div> -->
-  <div  class="banner-section">
+  <!-- <div  class="banner-section">
     <p padding-horizontal>Up Next</p>
     <ion-card>
       <img src="event.nextEventBanner" alt="up next on tsltv">
     </ion-card>
-  </div>
+  </div> -->
   <div  class="video-section">
-    <ion-item no-lines>
-      <div class="title">this is the event title </div>
+    <ion-item lines = "none">
+      <ion-label>
+        <p class="title">this is the event title </p>
+      </ion-label>
       <div slot="end" class="status" >live now</div>
     </ion-item>
     <div class="video-box">
-      <iframe width="100%" modestbranding="1" height="250" src="link" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      <iframe width="100%" modestbranding="1"
+       height="250" src="link"
+       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
     </div>
   </div>
@@ -34,20 +38,34 @@
     <div tappable  class="event" >
       <div class="overview">
         <div class="title">
-          <ion-icon  class="icon" name="add"></ion-icon>
-          <ion-icon  class="icon" name="remove"></ion-icon>
+          <ion-icon  class="icon" color="success" name="add"></ion-icon>
           event title
         </div>
         <div class="time">
           4898548
         </div>
       </div>
-      <div class="description">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime pariatur, reprehenderit inventore dicta qui dolore suscipit aut saepe atque. Aspernatur?
+      <div class="overview mt-1 mb-1">
+        <div class="title">
+          <ion-icon  class="icon" color="success" name="add"></ion-icon>
+          event title
+        </div>
+        <div class="time">
+          4898548
+        </div>
+      </div>
+      <div class="overview">
+        <div class="title">
+          <ion-icon  class="icon" color="success" name="add"></ion-icon>
+          event title
+        </div>
+        <div class="time">
+          4898548
+        </div>
       </div>
     </div>
   </div>
-  <div class="posts">
+  <!-- <div class="posts">
     <div class="head">Recent Videos</div>
     <ion-card   tappable >
       <ion-card-content >
@@ -68,10 +86,8 @@
             <img src="" alt="">
           </ion-thumbnail>
         </ion-item>
-
       </ion-card-content>
-
     </ion-card>
-  </div>
+  </div> -->
 
 </ion-content>
