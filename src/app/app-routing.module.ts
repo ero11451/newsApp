@@ -30,6 +30,15 @@ const routes: Routes = [
     path: 'assistant',
     loadChildren: () => import('./page/assistant/assistant.module').then( m => m.AssistantPageModule)
   },
+  {
+    path: 'posts/:id',
+    loadChildren: () => import('./page/post-details/post-details.module').then( m => m.PostDetailsPageModule)
+  },
+  {
+    path: 'home/:category',
+    loadChildren: () => import('./page/category-details/category-details.module').then( m => m.CategoryDetailsPageModule)
+  },
+
 
 ];
 @NgModule({

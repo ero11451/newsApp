@@ -23,13 +23,13 @@
   <div class="categories">
     <div class="categorySlider">
       <div class="category-box">
-        <div (click)="openCategoryDetails(category.id,category.title)" tappable *ngFor="let category of categories"
+        <div [routerLink]="['/home', item.id]" *ngFor="let item of categories$ | async"
           class="category">
           <div class="image">
-            <img [src]="category.image" alt="">
+            <img [src]="item.image" alt="">
           </div>
           <div class="title" text-capitalize>
-            {{category.title}}
+            {{item.name}}
           </div>
         </div>
         <div (click)="openCategoryDetails('ireport','iReport')" tappable class="category">
@@ -55,23 +55,23 @@
   </div>  -->
   <div class="posts">
     
-    <ion-card  *ngFor="let post of posts" >
+    <ion-card (click)="loadPost(post)" padding-bottom *ngFor="let post of posts$ | async" >
       <ion-card-content no-margin>
         <ion-item  lines='none' class="ion-no-padding">
          <div>
-           <p class="title">{{post.title}} </p>
-          <span class="excerpt">{{post.discription}}</span>        
+           <p class="title"  [innerHTML]="post.title.rendered"></p>
+          <span class="excerpt" [innerHTML]="post.excerpt.rendered"></span>        
          </div>
 
           <ion-thumbnail slot="end">
-            <img src="{{post.image}}" >
+            <img [src]="post.featured_image" >
           </ion-thumbnail>
           </ion-item>
           <div class="footer">
             <img src="{{post.image}}" alt="tsltv logo">
             <span>TslNigeria Tv News</span>
             <div class="bullet"></div>
-            <span>{{post.modified}}</span> 
+            <span> By {{post._embedded.author[0].name }}</span> 
           </div>
 
       </ion-card-content>
