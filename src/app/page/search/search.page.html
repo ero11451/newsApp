@@ -1,9 +1,33 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>search</ion-title>
+<ion-header no-border>
+
+  <ion-toolbar >
+    <ion-searchbar  placeholder="Search 'Latest News'"></ion-searchbar>
   </ion-toolbar>
+
 </ion-header>
 
-<ion-content>
 
+<ion-content >
+  <div class="loading" >
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+  <div class="no-result" >
+    <p>No result found for </p>
+  </div>
+  <ion-list class="results" >
+    <ion-item  >
+      <ion-thumbnail  class="result-image">
+        <img src="assets/imgs/search.svg" >
+      </ion-thumbnail>
+
+      <ion-thumbnail slot="end" class="result-image search-icon">
+        <img src="assets/imgs/search.svg" alt="">
+      </ion-thumbnail>
+      
+      <div class="title"> </div>
+    </ion-item>   
+    <div class="keyword">
+        Trending story: keyword
+      </div>
+  </ion-list>
 </ion-content>

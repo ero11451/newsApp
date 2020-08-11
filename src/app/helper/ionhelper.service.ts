@@ -4,7 +4,8 @@ import {
     AlertController, 
     LoadingController, 
     PickerController, 
-    ToastController} from '@ionic/angular';
+    ToastController,
+    ActionSheetController} from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,8 @@ export class IonhelperService {
     private alertController: AlertController,
     private loadingController: LoadingController,
     private pickerController: PickerController,
-    private toastController: ToastController
+    private toastController: ToastController,
+    private actionSheetController: ActionSheetController
     ) { }
 
   async ionModal(pages,props) {
@@ -26,6 +28,34 @@ export class IonhelperService {
     });
   
     await modal.present();
+  }
+  async presentActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Albums',
+      buttons: [{
+        text: 'Delete',
+        role: 'destructive',
+        icon: 'trash',
+        handler: () => {
+          console.log('Delete clicked');
+        }
+      }, {
+        text: 'Share',
+        icon: 'share',
+        handler: () => {
+          console.log('Share clicked');
+        }
+      }, {
+        text: 'Cancel',
+        icon: 'close',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      }]
+    });
+  
+    await actionSheet.present();
   }
   async ionAlert(header,subHeader, message,) {
     const alert = await this.alertController.create({
