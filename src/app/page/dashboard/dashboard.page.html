@@ -1,0 +1,118 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title class="ion-margin">
+      <small style="margin-left: 15px;">Dashboard</small>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+      <ion-item lines="none" class="profile">
+        <ion-card class="profile-img">
+         <img  class="img-fluid"src="assets/images/upload-icon.svg"  />   
+          <div class="overlay">
+            <p>muyi</p>
+          </div>         
+        </ion-card>
+      <ion-label class="ml-3">
+          <ion-card-title class="title">ero osamuyi</ion-card-title>
+          <p class="subtitle">eroosamuyi@gmail.com</p>
+          <button class="edit-btn" [routerLink]="['/edit']" routerLinkActive="router-link-active" >Edit profile</button>
+      </ion-label>
+    </ion-item>
+  <ion-item lines="none">
+    <ion-text color="success">
+      <p>Profile</p>
+    </ion-text>
+  </ion-item>
+  <!-- user wallet -->
+      <ion-item  data-toggle="collapse" data-target="#wallet" aria-expanded="false" aria-controls="wallet">
+        <img style="height: 30px;width: 30px; margin-right: 10px;" src="assets//images//wallet1.svg" class = "icon" alt="" srcset="">
+        <ion-label class="text-bold">My Wallet</ion-label>
+        <ion-icon size="small" name="chevron-down-outline"></ion-icon>
+      </ion-item> 
+      <div class="collapse " id="wallet">
+        <ion-item lines="none">
+
+          <ion-label>
+            <ion-text color="success">
+            <small color="success" >Balance</small>   
+            </ion-text>
+            <p class="text-bold">000</p>
+          </ion-label>
+          <button class="btn btn-success p-1 pr-3 pl-3" type="button">Cash Out</button>
+        </ion-item>
+      </div>
+
+
+     <!-- user detail -->
+      <ion-item  data-toggle="collapse" data-target="#Detail" aria-expanded="false" aria-controls="Detail">
+        <img style="height: 30px;width: 30px; margin-right: 10px;" src="assets//images//userIcon.svg" class = "icon" alt="" srcset="">
+        <ion-label class="text-bold">My Detail</ion-label>
+        <small>Views 1</small>
+        <ion-icon size="small"name="chevron-down-outline"></ion-icon>
+      </ion-item>
+    <!-- user datail -->
+      <div class="collapse " id="Detail">
+       <ion-list>
+          <ion-item>
+            <ion-label>
+              <small class="text-muted">user name</small>
+              <p class="text-bold">Ero osamuyi</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <small class="text-muted">Password</small>
+              <p class="text-bold">*****</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <small class="text-muted">Gender</small>
+              <p class="text-bold">Muyi</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <small class="text-muted">Phone Number</small>
+              <p class='text-bold'>0000000000</p>
+            </ion-label>
+          </ion-item>
+       </ion-list>
+      </div>
+      <!-- user detail end  -->
+      <ion-item  data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <img style="height: 30px;width: 30px; margin-right: 10px;" src="assets//images//posticon.svg" class = "icon" alt="" srcset="">
+        <ion-label class="text-bold">My Post</ion-label>
+        <small>Views 1</small>
+        <ion-icon size="small"name="chevron-down-outline"></ion-icon>
+      </ion-item>
+       <div class="collapse m-3" id="collapseExample">
+         <ion-list>
+            <ion-item>
+                 <p class="text-bold">Title</p>
+                 <small slot="end" >20/1/2021</small>
+            </ion-item> 
+             <div>
+             <ion-text >
+               <small class="text-muted ">
+                 epellat expedita voluptatibus optio libero obcaecati velit distinctio non modi!;;
+               </small>
+             </ion-text>
+             <div class="mt-2 mb-2 post-img" >
+               <img class="img-fluid" src="" alt="">
+             </div>
+              <ion-text >
+              <p class="text-bold">Description</p>
+                <small class="text-muted">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nulla aperiam deleniti ex saepe ea laudantium, mollitia dolor sapiente. Autem quas culpa repudiandae reiciendis hic dolor inventore dolorum totam magni.
+                </small>
+              </ion-text>              
+             </div>   
+         </ion-list>
+       </div>  
+    </ion-list>
+</ion-content>

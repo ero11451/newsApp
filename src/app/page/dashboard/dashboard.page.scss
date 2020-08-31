@@ -1,0 +1,67 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.hearder-icon{
+  height: 20px;
+  width: 20px;
+}
+ion-segment-button{
+  font-size: medium;
+}
+.profile{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+   .profile-img{
+        border-radius: 5px;
+        height: 120px;
+        width: 130px;
+        // margin-right: 15px;
+        text-align: center;
+      .overlay {
+        position: absolute; 
+        bottom: 0; 
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /* Black see-through */
+        color: #f1f1f1; 
+        width: 130px;
+        transition: .3s ease;
+        opacity:0.9;
+        color: white;
+        font-size: 10px;
+        padding: 10px;
+        // height: 10px;
+        text-align: center;
+      }
+    }
+ .title{
+   font-size: 20px;
+   font-weight: bold;
+   }
+   button{
+    padding-left: 15px;
+    padding-right: 15px;
+   }
+
+
+}
+.edit-btn{
+    border: solid 1px limegreen;
+    color: limegreen;
+    text-align: center;
+    background-color: white;
+    font-size: small;
+    padding: 3px;
+    margin-top: 3px;
+    border-radius: 2px;
+}
+.text-bold{
+  font-weight: 600;
+}
+.post-img{
+   height: 200px;
+   width: 100%;
+   background-color: grey;
+   border-radius: 5px;
+}

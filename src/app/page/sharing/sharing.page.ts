@@ -1,5 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { IonhelperService } from 'src/app/helper/ionhelper.service';
 
 @Component({
   selector: 'app-sharing',
@@ -13,4 +15,6 @@ export class SharingPage implements OnInit {
   ngOnInit() {
   }
 
+  register(){
+  }
 }

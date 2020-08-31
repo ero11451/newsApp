@@ -38,7 +38,33 @@ const routes: Routes = [
     path: 'home/:category',
     loadChildren: () => import('./page/category-details/category-details.module').then( m => m.CategoryDetailsPageModule)
   },
-
+  {
+    path: 'iregister',
+    loadChildren: () => import('./page/Iregister/i-register/i-register.module').then( m => m.IRegisterPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./page/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'Reportlogin',
+    loadChildren: () => import('./page/Iregister/i-login/i-login.module').then( m => m.ILoginPageModule)
+  },
+  {
+    path: 'andmindashboad',
+    loadChildren: () => import('./../app/page/andmindashboad/andmindashboad.module').then( m => m.AndmindashboadPageModule)
+  },
+  {
+    path: 'edit',
+    loadChildren: () => import('./../app/page/andmindashboad/andmindashboad.module').then( m => m.AndmindashboadPageModule)
+  },
+  {
+    path: '**',
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },  {
+    path: 'menu',
+    loadChildren: () => import('./page/menu/menu.module').then( m => m.MenuPageModule)
+  },
 
 ];
 @NgModule({

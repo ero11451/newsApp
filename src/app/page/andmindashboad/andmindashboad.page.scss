@@ -1,0 +1,93 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.hearder-icon{
+  height: 20px;
+  width: 20px;
+}
+ion-segment-button{
+  font-size: medium;
+}
+.profile{
+  margin-top: 10px;
+  margin-bottom: 10px;
+    img{
+        border-radius: 5px;
+        height: 100px;
+        width: 100px;
+        margin: 1%;
+    }
+ .title{
+   font-size: 20px;
+   font-weight: bold;
+   }
+   button{
+    padding-left: 15px;
+    padding-right: 15px;
+   }
+.overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .3s ease;
+    opacity:1;
+    color: white;
+    font-size: 10px;
+    padding: 20px;
+    height: 10px;
+    text-align: center;
+  }
+  .profile-image:hover .overlay {
+    opacity: 1;
+  }
+}
+.edit-btn{
+    border: solid 1px limegreen;
+    color: limegreen;
+    text-align: center;
+    background-color: white;
+    font-size: small;
+    padding: 3px;
+    margin-top: 3px;
+    border-radius: 2px;
+}
+.text-bold{
+  font-weight: 300;
+}
+
+
+
+.img-container {
+    position: relative;
+    width: 35%;
+    max-width: 300px;
+ 
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+}

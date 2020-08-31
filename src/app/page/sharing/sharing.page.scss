@@ -10,7 +10,12 @@
         display: none;
       }
     }
-  
+  .text-muted{
+    color: gray;
+  }
+  .text-bold{
+    font-weight: 600;
+  }
     .header-btn {
       margin-right: 14px;
       width: 64px;
@@ -28,8 +33,9 @@
       }
     }
   
-    .media {
+    .media-1 {
       margin-top: 40px;
+      width: 100%;
       .note {
         text-transform: uppercase;
         font-size: 7pt;
@@ -50,6 +56,8 @@
       }
   
       .selected-media {
+        width: 100%;
+
         .action {
           img {
             margin: auto;
@@ -62,4 +70,11 @@
       }
     }
   
-  
+  .ireport-btn{
+    text-align: center;
+    border-radius:5px;
+    border: solid 1px green;
+    color: green;
+    padding: 10px;
+    background-color: white;
+  }

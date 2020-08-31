@@ -2,13 +2,16 @@
 
   <ion-toolbar  color="success">
     <ion-item color="success" class="search-bar" lines ='none'>
-      <ion-avatar (click)="openAccountOptions()" tappable item-left class="avatar">
-        <!-- <img src="{{user?.imageUrl || 'assets/imgs/avatar.png'}}"> -->
-        <img src="../../../assets//images/slider1.jpg" alt="" srcset="">
-      </ion-avatar>
+       
+     <ion-icon  name="menu"></ion-icon>
+      <!-- <ion-avatar (click)="openAccountOptions()" tappable item-left class="avatar">
+        <img src="{{user?.imageUrl || 'assets/imgs/avatar.png'}}">
+        <img src="assets//images/slider1.jpg" alt="" srcset="">
+      </ion-avatar> -->
       <span tappable (click)="goToSearch()">
         <ion-searchbar class="searc" mode="wp" placeholder="Search 'Latest News'"></ion-searchbar>
       </span>
+      
     </ion-item>
   </ion-toolbar>
 
@@ -16,6 +19,7 @@
 
 
 <ion-content #content>
+
   <ion-refresher  (ionRefresh)="doRefresh($event)">
     <ion-refresher-content pullingText="Pull to refresh"></ion-refresher-content>
   </ion-refresher>
@@ -53,15 +57,17 @@
       </ion-slide>
     </ion-slides>
   </div>  -->
+  
+  <ion-spinner name="crescent"  *ngIf="!posts" color="success"></ion-spinner>
   <div class="posts">
     
     <ion-card (click)="loadPost(post)" padding-bottom *ngFor="let post of posts$ | async" >
       <ion-card-content no-margin>
         <ion-item  lines='none' class="ion-no-padding">
-         <div>
+         <ion-label>
            <p class="title"  [innerHTML]="post.title.rendered"></p>
           <span class="excerpt" [innerHTML]="post.excerpt.rendered"></span>        
-         </div>
+         </ion-label>
 
           <ion-thumbnail slot="end">
             <img [src]="post.featured_image" >
@@ -83,5 +89,6 @@
     <ion-infinite-scroll-content></ion-infinite-scroll-content>
   </ion-infinite-scroll>  -->
 
+  
 </ion-content>
 

@@ -1,0 +1,63 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <!-- <ion-title color="success">I Register</ion-title> -->
+    <!-- <ion-icon slot="end" class="ion-margin mg" (click)="close()" name="close"></ion-icon> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+
+  <ion-list >  
+    <ion-item lines="none">
+      <div> 
+         <h4>Welcome!</h4> 
+         <small>Become a I-Reporter</small>
+      </div>
+    </ion-item>
+    <br>
+    <ion-item lines='none'>
+  
+      <div>
+        <img  class="img-fluid" style="height: 80px;width: 80px;" src="assets//images//upload-icon.svg" alt="" srcset="">
+        <br>
+       <ion-button color="success">
+         Add Image
+         <ion-icon name="cloud-upload-outline"></ion-icon>
+       </ion-button>
+      </div>
+    </ion-item>
+  
+
+    <ion-item class="mg">
+      <ion-label position="floating">Full Name</ion-label>
+      <ion-input></ion-input>
+      </ion-item>
+    <ion-item class="mg">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input></ion-input>
+    </ion-item>
+    <ion-item class="mg">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+ 
+ <div class="container mg" >
+     <br>
+      <ion-button (click)="onClick()" color="success" shape="round">
+        Sign Up
+      </ion-button>
+      <small></small>
+ </div>
+ <br>
+ <ion-item lines="none">
+  <div class="mg" slot="end">
+    <small>Already a member</small>
+    <ion-text color="success" [routerLink]="['/Reportlogin']" routerLinkActive="router-link-active" >Sign In</ion-text>
+  </div>  
+ </ion-item>
+ 
+   </ion-list>
+  
+
+</ion-content>

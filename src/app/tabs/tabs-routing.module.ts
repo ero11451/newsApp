@@ -24,6 +24,10 @@ const routes: Routes = [
         loadChildren: () => import('../page/assistant/assistant.module').then(m => m.AssistantPageModule)
       },
       {
+        path: 'Admin',
+        loadChildren: () => import('../page/andmindashboad/andmindashboad.module').then(m => m.AndmindashboadPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'

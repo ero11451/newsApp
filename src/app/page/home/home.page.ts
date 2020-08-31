@@ -75,6 +75,7 @@ export class HomePage implements OnInit {
   goToSearch(){
     this.ion.ionModal(SearchPage, 'the us aspo')
   }
+  
   posts = [{
     title:'orem ipsum dolor sit ame',
     modified:'120',

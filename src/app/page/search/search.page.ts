@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { NavController, NavParams } from '@ionic/angular';
+import { NavController, NavParams, ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-search',
@@ -10,6 +10,7 @@ import { NavController, NavParams } from '@ionic/angular';
 export class SearchPage implements OnInit {
 
   constructor(
+     private modalController: ModalController,
      public navCtrl: NavController, 
      public navParams: NavParams) { }
   @ViewChild('searchBar') searchBar: any;
@@ -19,7 +20,12 @@ export class SearchPage implements OnInit {
   loading: boolean;
   ngOnInit() {
   }
-
+  close(){
+   this.modalController.dismiss()
+  }
+  ionViewDidLeave(){
+    this.modalController.dismiss()
+  }
   ionViewDidLoad() {
     setTimeout(() => {
       this.searchBar.setFocus()
@@ -38,6 +44,6 @@ export class SearchPage implements OnInit {
     }
   }
   openPost(post){
-   console.log(post)
+   console.log(post);
   }
 }
