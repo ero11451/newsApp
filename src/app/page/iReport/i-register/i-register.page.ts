@@ -1,3 +1,4 @@
+import { RouterModule, Router } from '@angular/router';
 import { Component, OnInit, NgZone, ViewChild } from '@angular/core';
 import { IonhelperService } from 'src/app/helper/ionhelper.service';
 import { ModalController, NavController, NavParams } from '@ionic/angular';
@@ -22,14 +23,17 @@ export class IRegisterPage implements OnInit {
 
   constructor(
      private modalController: ModalController,
-     
+    //  private route: ActivatedRoute,
+    private router: Router  
      ) {}
   ngOnInit() {
   }
   close(){this.modalController.dismiss(); }
 
   onClick(){}
-
+  register(){
+    this.router.navigate(['dashboard']);
+  }
   getMediaFromFile(isVideo = false) {
     // const options: CameraOptions = {
     //   quality: 60,

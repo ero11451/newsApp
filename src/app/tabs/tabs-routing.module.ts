@@ -13,7 +13,7 @@ const routes: Routes = [
       },
       {
         path: 'sharing',
-        loadChildren: () => import('../page/sharing/sharing.module').then(m => m.SharingPageModule)
+        loadChildren: () => import('../page/iReport/sharing/sharing.module').then(m => m.SharingPageModule)
       },
       {
         path: 'live',

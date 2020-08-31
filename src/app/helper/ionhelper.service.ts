@@ -115,4 +115,14 @@ export class IonhelperService {
     const toast = await this.toastController.create({ message, duration, color});
     toast.present();
   }
+  async presentModal(page , style) {
+    const modal = await this.modalController.create({
+    component: page,
+    componentProps: { value: 123 },
+    cssClass:style
+    });
+  
+    await modal.present();
+  
+  }
 }

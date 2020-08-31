@@ -7,6 +7,8 @@ import { Observable } from "rxjs";
 import { Router } from "@angular/router";
 import { ActivatedRoute, ParamMap } from "@angular/router";
 import { switchMap } from "rxjs/operators";
+import { PopoverController } from '@ionic/angular';
+import { MenuPage } from '../menu/menu.page';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +19,7 @@ export class HomePage implements OnInit {
   public categories$: Observable<any>;
   public items: Array<{ title: string; note: string; icon: string }> = [];
   constructor(
+    private popoverController: PopoverController,
     private ion: IonhelperService,
     private postSrvc: NewsService,
     private router: Router,
@@ -40,40 +43,40 @@ export class HomePage implements OnInit {
       )
     );
    }
- categories = [
-    {
-      title: 'Edo state news',
-      image: `assets/imgs/categories/edo.png`,
-      id: [41, 53]
-    },
-    {
-      title: 'business',
-      image: `assets/mi's/categories/business.svg`,
-      id: [44]
-    },
-    {
-      title: 'science & tech.',
-      image: `assets/imgs/categories/science.svg`,
-      id: [55]
-    },
-    {
-      title: 'sport',
-      image: `assets/imgs/categories/sport.png`,
-      id: [47]
-    },
-    {
-      title: 'lifestyle',
-      image: `assets/imgs/categories/lifestyle.svg`,
-      id: [60, 116, 45, 43, 48]
-    },
-    {
-      title: 'events',
-      image: `assets/imgs/categories/events.svg`,
-      id: [46]
-    },
-  ]
+//  categories = [
+//     {
+//       title: 'Edo state news',
+//       image: `assets/imgs/categories/edo.png`,
+//       id: [41, 53]
+//     },
+//     {
+//       title: 'business',
+//       image: `assets/mi's/categories/business.svg`,
+//       id: [44]
+//     },
+//     {
+//       title: 'science & tech.',
+//       image: `assets/imgs/categories/science.svg`,
+//       id: [55]
+//     },
+//     {
+//       title: 'sport',
+//       image: `assets/imgs/categories/sport.png`,
+//       id: [47]
+//     },
+//     {
+//       title: 'lifestyle',
+//       image: `assets/imgs/categories/lifestyle.svg`,
+//       id: [60, 116, 45, 43, 48]
+//     },
+//     {
+//       title: 'events',
+//       image: `assets/imgs/categories/events.svg`,
+//       id: [46]
+//     },
+//   ]
   goToSearch(){
-    this.ion.ionModal(SearchPage, 'the us aspo')
+    this.router.navigate(['/search', {  }]);
   }
   
   posts = [{
@@ -82,5 +85,15 @@ export class HomePage implements OnInit {
     image:'../../../assets/images/slider2.png',
     discription:'orem ipsum do numquam, excepturi, facere neq',
   }]
-
+ 
+  async menuOpen(ev: any) {
+    const popover = await this.popoverController.create({
+      component: MenuPage,
+      event: ev,
+      cssClass: 'my-custom-class',
+      translucent: false
+    });
+  
+    await popover.present();
+  }
 }

@@ -1,12 +1,15 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>post-details</ion-title>
+<ion-header no-border>
+  <ion-toolbar no-border>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card padding-bottom *ngIf="post$ | async as post">
-    <img class="postimage" [src]="post.featured_image" />
+  <!-- <ion-spinner name="circular" color="success" ></ion-spinner> -->
+  <div padding-bottom *ngIf="post$ | async as post">
+    <img class="postimage img-fluid" [src]="post.featured_image" />
     <ion-card-header>
       <ion-card-subtitle>By {{post._embedded.author[0].name }}</ion-card-subtitle>
       <ion-card-title [innerHTML]="post.title.rendered"> </ion-card-title>
@@ -14,5 +17,5 @@
     <ion-card-content [innerHTML]="post.content.rendered">
      
     </ion-card-content>
-  </ion-card>
+  </div>
 </ion-content>

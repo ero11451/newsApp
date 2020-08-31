@@ -7,7 +7,7 @@ pager
  >
   <ion-slide>
     <div class="slider">
-        <img src="../../../assets/images/welcome.jpg">
+        <img src="assets/images/welcome.jpg">
       
         <h4 class="title">welcome</h4>
         <p class="details">
@@ -41,8 +41,8 @@ pager
 </ion-slides>
   
     <ion-item lines="none">
-      <ion-button slot="start" (click)="slider.slidePrev()"   outline text-capitalize>Previous</ion-button>
-      <ion-button slot="end" (click)="slider.isEnd() ? goToAuth() : slider.slideNext()"  text-capitalize>Skip</ion-button>
+      <ion-button slot="start" color="success" (click)="slider.slidePrev()"   outline text-capitalize>Previous</ion-button>
+      <ion-button slot="end"  color="success" fill='outline' (click)="slider.isEnd() ? goToAuth() : slider.slideNext()"  text-capitalize>Skip</ion-button>
     </ion-item>
 
 </ion-content>

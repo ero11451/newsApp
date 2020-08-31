@@ -1,7 +1,7 @@
 <ion-header class="ion-no-border">
   <ion-toolbar class="ion-no-border" color="white">
     
-    <ion-button fill='clear' slot="end" color="success" >
+    <ion-button [routerLink]="['/dashboard']" routerLinkActive="router-link-active"  fill='clear' slot="end" color="success" >
       Dashboard
     </ion-button>
   </ion-toolbar>
@@ -22,7 +22,7 @@
   </div>
   <div >
     <br>
-  <ion-button (click)="register()" [routerLink]="['/iregister']" routerLinkActive="router-link-active"  color="success"  shape="round">
+  <ion-button (click)="register()" [routerLink]="['register']" routerLinkActive="router-link-active"  color="success"  shape="round">
       Register
    </ion-button>  
  
@@ -47,24 +47,22 @@
         Play Selected Video
       </div>
 
-      <div class="action image" >
-        <!-- <img [src]="image" [imageViewer]="image" class="icon"> -->
-      </div>
+    
     </div>
 
     <div  class="action">
-      <ion-icon class="icon" name="add"></ion-icon>
+      <ion-icon class="icon" name="camera-outline"></ion-icon>
       Take Photo
     </div>
     <div class="action">
-      <ion-icon class="icon" name="add"></ion-icon>
+      <ion-icon class="icon"  name="image-outline"></ion-icon>
       Choose Image
     </div>
     <div  tappable class="action">
-      <ion-icon class="icon" name="add"></ion-icon>
+      <ion-icon class="icon" name="videocam-outline"></ion-icon>
       Choose Video
     </div>
   </div>
-
 </div>
+<ion-button expand="full" (click)="post()" color="success">Post</ion-button>
 </ion-content>

@@ -1,41 +1,42 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/sharing"></ion-back-button>
+    </ion-buttons>
     <ion-title class="ion-margin">
-      <small style="margin-left: 15px;">Dashboard</small>
+      <small style="margin-left: 15px;">My Profile </small>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-    <ion-list>
-      <ion-item lines="none" class="profile">
-        <ion-card class="profile-img">
-         <img  class="img-fluid"src="assets/images/upload-icon.svg"  />   
-          <div class="overlay">
-            <p>muyi</p>
-          </div>         
-        </ion-card>
+    <ion-list lines="none">
+      <div lines="none" class="profile">
+        
+         <ion-img class="profile-img" src="assets/images/muyi.jpg"></ion-img>
+      
       <ion-label class="ml-3">
           <ion-card-title class="title">ero osamuyi</ion-card-title>
           <p class="subtitle">eroosamuyi@gmail.com</p>
           <button class="edit-btn" [routerLink]="['/edit']" routerLinkActive="router-link-active" >Edit profile</button>
       </ion-label>
-    </ion-item>
+     </div>
   <ion-item lines="none">
-    <ion-text color="success">
-      <p>Profile</p>
+    <ion-text >
+      <p>Dashboard</p>
     </ion-text>
   </ion-item>
   <!-- user wallet -->
-      <ion-item  data-toggle="collapse" data-target="#wallet" aria-expanded="false" aria-controls="wallet">
+      <!-- <ion-item  data-toggle="collapse" data-target="#wallet" aria-expanded="false" aria-controls="wallet">
         <img style="height: 30px;width: 30px; margin-right: 10px;" src="assets//images//wallet1.svg" class = "icon" alt="" srcset="">
         <ion-label class="text-bold">My Wallet</ion-label>
         <ion-icon size="small" name="chevron-down-outline"></ion-icon>
-      </ion-item> 
-      <div class="collapse " id="wallet">
+      </ion-item>  -->
+      <div  >
         <ion-item lines="none">
-
+          <img style="height: 20px;width: 20px; margin-right: 10px;" src="assets/images/wallet1.svg" class = "icon" alt="" srcset="">
+      
           <ion-label>
             <ion-text color="success">
             <small color="success" >Balance</small>   
@@ -49,14 +50,14 @@
 
      <!-- user detail -->
       <ion-item  data-toggle="collapse" data-target="#Detail" aria-expanded="false" aria-controls="Detail">
-        <img style="height: 30px;width: 30px; margin-right: 10px;" src="assets//images//userIcon.svg" class = "icon" alt="" srcset="">
-        <ion-label class="text-bold">My Detail</ion-label>
-        <small>Views 1</small>
+        <img style="height: 20px;width: 20px; margin-right: 10px;" src="assets/images/userIcon.svg" class = "icon" alt="" srcset="">
+        <ion-label class="text-bold"><p> My Detail </p></ion-label>
+        
         <ion-icon size="small"name="chevron-down-outline"></ion-icon>
       </ion-item>
     <!-- user datail -->
       <div class="collapse " id="Detail">
-       <ion-list>
+       <ion-list lines="none">
           <ion-item>
             <ion-label>
               <small class="text-muted">user name</small>
@@ -72,7 +73,7 @@
           <ion-item>
             <ion-label>
               <small class="text-muted">Gender</small>
-              <p class="text-bold">Muyi</p>
+              <p class="text-bold">Male</p>
             </ion-label>
           </ion-item>
           <ion-item>
@@ -85,8 +86,8 @@
       </div>
       <!-- user detail end  -->
       <ion-item  data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        <img style="height: 30px;width: 30px; margin-right: 10px;" src="assets//images//posticon.svg" class = "icon" alt="" srcset="">
-        <ion-label class="text-bold">My Post</ion-label>
+        <img style="height: 20px;width: 20px; margin-right: 10px;" src="assets/images/posticon.svg" class = "icon" alt="" srcset="">
+        <ion-label class="text-bold"> <p>My Post</p> </ion-label>
         <small>Views 1</small>
         <ion-icon size="small"name="chevron-down-outline"></ion-icon>
       </ion-item>
@@ -97,11 +98,7 @@
                  <small slot="end" >20/1/2021</small>
             </ion-item> 
              <div>
-             <ion-text >
-               <small class="text-muted ">
-                 epellat expedita voluptatibus optio libero obcaecati velit distinctio non modi!;;
-               </small>
-             </ion-text>
+            
              <div class="mt-2 mb-2 post-img" >
                <img class="img-fluid" src="" alt="">
              </div>
